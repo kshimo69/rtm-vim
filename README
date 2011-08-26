@@ -1,0 +1,52 @@
+============
+Project info
+============
+
+Author: Kosei Kitahara <surgo.jp@gmail.com>
+Project host: http://bitbucket.org/Surgo/rtm.vim/
+
+=======
+Install
+=======
+
+ * get and set path to cURL (no need SSL)
+   http://curl.haxx.se/download.html
+   if windows, put curl.exe to vim home directory
+ * get md5.vim plugin and put vim plugin directory
+   http://www.vim.org/scripts/script.php?script_id=2806
+ * put rtm.vim to vim plugin directory
+
+==========
+Activation
+==========
+
+ * get ur RTM (Non-commercial use) API key and shared secret
+   https://www.rememberthemilk.com/services/api/keys.rtm
+ * set .vimrc file
+  * `let rtm_api_key='<ur api key>'`
+  * `let rtm_shared_secret='<ur shared secret>'`
+ * get allow api access url via `:RTM -a` command
+ * allow api access
+ * get token via: `:RTM -t` command
+ * token put .vimrc file
+  * `let rtm_token='<ur token>'`
+
+=====
+Usage
+=====
+
+Add Task
+--------
+
+ * add current line to task
+   `:C[RTM] -a` command
+ * add current buffer to task
+   `:B[RTM] -a` command
+
+====
+TODO
+====
+
+ * set tag, location, priority to task
+ * complete task
+ * delete task
